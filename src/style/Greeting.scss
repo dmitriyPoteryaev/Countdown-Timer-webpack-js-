@@ -1,0 +1,53 @@
+.greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    justify-content: center;
+    .WhatEve{
+      width: 500px;
+      height: 50px;
+      background-color: aliceblue;
+      text-align: center;
+      border-radius:3px;
+      padding:10px;
+    }
+    .event {
+      width: 500px;
+      margin-top: 50px;
+      border-radius: 3px;
+      height: 50px;
+    }
+
+    .date {
+      margin-top: 50px;
+      width: 500px;
+      border-radius: 3px;
+      height: 50px;
+    }
+
+    .Plan {
+      margin-top: 50px;
+      width: 130px;
+      border-radius: 3px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .Attention {
+      display: none;
+      margin-top: 50px;
+      width: 500px;
+      justify-content: center;
+      background-color: aliceblue;
+     
+      
+    }
+  }
+}

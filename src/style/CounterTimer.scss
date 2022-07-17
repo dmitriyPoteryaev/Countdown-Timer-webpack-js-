@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+
+// всё про задний фон
+.body {
+  background-image: url("https://thumbs.dreamstime.com/z/many-lot-multicultural-different-business-collage-made-some-pictures-233600374.jpg");
+  font-family: "Poppins", sans-serif;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  
+}
+
+
+// всё про контент на сайте
+.CounterTimer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  min-width: 100vh;
+  .NameEve {
+    font-weight: normal;
+    font-size: 4rem;
+    display: flex;
+    margin-top: 5rem;
+  }
+
+  .countdown-container {
+    display: flex;
+  
+    .countdown-el {
+      text-align: center;
+  
+      .span {
+        font-size: 1.3rem;
+      }
+  
+      .big-text {
+        font-weight: bold;
+        font-size: 6rem;
+        line-height: 1;
+        margin: 0 2rem;
+      }
+    }
+  }
+
+}
+
+

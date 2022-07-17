@@ -12,30 +12,43 @@
     <title>Countdown Timer</title>
 </head>
 
-<body>
-    <h1>New Years Eve</h1>
-    <div class="countdown-container">
-        <div class="countdown-el days-c">
-            <p class="big-text" id="month">0</p>
-            <span>month</span>
-        </div>
-        <div class="countdown-el days-c">
-            <p class="big-text" id="days">0</p>
-            <span>days</span>
-        </div>
-        <div class="countdown-el hours-c">
-            <p class="big-text" id="hours">0</p>
-            <span>hours</span>
-        </div>
-        <div class="countdown-el minutes-c">
-            <p class="big-text" id="minutes">0</p>
-            <span>minutes</span>
-        </div>
-        <div class="countdown-el seconds-c">
-            <p class="big-text" id="seconds">0</p>
-            <span>seconds</span>
-        </div>
+<body class="body">
+    <div class="greeting">
+        <form class="form" action="#">
+            <span class="WhatEve">Какое событие Вы ждёте?</span>
+            <input class="event" type='text' placeholder='Введите название события' name='event' />
+            <input class="date" type='date' placeholder='Введите дату события' name='date' />
+            <button class="Plan" type="submit">Запланировать событие</button>
+            <div class="Attention" >Все поля обязательные!</div>
+        </form>
     </div>
+    <div class="CounterTimer">
+        <h1 class="NameEve"></h1>
+        <div class="countdown-container">
+            <div class="countdown-el days-c">
+                <p class="big-text" id="month"></p>
+                <span>month</span>
+            </div>
+            <div class="countdown-el days-c">
+                <p class="big-text" id="days"></p>
+                <span>days</span>
+            </div>
+            <div class="countdown-el hours-c">
+                <p class="big-text" id="hours"></p>
+                <span>hours</span>
+            </div>
+            <div class="countdown-el minutes-c">
+                <p class="big-text" id="minutes"></p>
+                <span>minutes</span>
+            </div>
+            <div class="countdown-el seconds-c">
+                <p class="big-text" id="seconds"></p>
+                <span>seconds</span>
+            </div>
+        </div>
+
+    </div>
+
 
 </body>
 
