@@ -17,8 +17,9 @@ const Attent = document.querySelector('.Attention');
 ButtonEve.addEventListener('click',(event)=>{
 
     event.preventDefault();
+   
 
-    !inputDate.value.trim()&&!inputEve.value.trim()
+   !inputDate.value.trim()||!inputEve.value.trim()
     ?
     Attention()
     :
