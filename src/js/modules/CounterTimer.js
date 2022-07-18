@@ -1,15 +1,15 @@
 import '../../style/CounterTimer.scss'
 import Show from './Show.js'
-import AllClear from './AllClear.js'
+import Clear from './Clear.js'
 
 
 
-function CounterTimer(date,eve,allModules) {
+function CounterTimer(date,eve,generalModules) {
 
-    AllClear(allModules)
+    Clear(generalModules)
     Show(document.querySelector('.CounterTimer'))
 
-console.log(date,eve)
+    console.log(date)
     
     const NameEve = document.querySelector('.NameEve');
     const seconds = document.getElementById('seconds');
