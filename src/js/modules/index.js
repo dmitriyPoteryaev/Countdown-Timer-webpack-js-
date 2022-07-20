@@ -1,9 +1,9 @@
 
-import Greeting from './Greeting.js'
+import Greeting from './pages/Greeting.js'
 
 
 const generalModules=[
-    document.querySelector('.CounterTimer'),
+document.querySelector('.CounterTimer'),
 document.querySelector('.greeting')]
 
 
