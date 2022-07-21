@@ -15,15 +15,24 @@
 <body class="body">
     <div class="greeting">
         <form class="form" action="#">
-            <span class="WhatEve">Какое событие Вы ждёте?</span>
-            <button class="Plan" type="submit">Запланировать событие</button>
-            <input class="event" type='text' placeholder='Введите название события' name='event' />
-            <div>
-            <input class="date" type='text' placeholder='Введите дату события' name='date' />
-            <ul class="ListMonth" style="display:none"></ul>
+            <span class="WhatEve">Создать событие</span>
+            <div class="commonInp">
+                <span class="nameInput">Событие</span>
+                <div class="inpPlusFig">
+                <input class="event" type='text' placeholder='Введите название события' name='event' />
+                <img class="figEve" style="display:none" />
             </div>
-            <div class="Attention">Все поля обязательные!</div>
-            <div class="AttentionTime">Невырный формат ввода даты!</div>
+                <span class="Attention" style="display:none"></span>
+                </div>
+            <div class="commonInp">
+                <span class="nameInput">Время</span>
+                <div class="inpPlusFig">
+                    <input class="date" type='text' placeholder='Введите дату события' name='date' />
+                    <img class="figTime" style="display:none" />
+                </div>
+            <span class="AttentionTime" style="display:none"></span>
+            </div>
+            <button class="Plan" type="submit">Запланировать событие</button>
         </form>
     </div>
     <div class="CounterTimer">

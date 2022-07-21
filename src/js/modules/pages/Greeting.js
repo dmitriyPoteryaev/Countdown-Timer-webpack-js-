@@ -1,10 +1,12 @@
 import "../../../style/Greeting.scss";
+import "../../../style/Inputs.scss";
 import CounterTimer from "./CounterTimer.js";
 import Clear from "../ShowOrHidePage/Clear.js";
 import Show from "../ShowOrHidePage/Show.js";
 // import CreateList from "./CreateList.js";
 import IMask from 'imask';
 import CheckDate from '../utilits/CheckDate.js'
+import CheckInput from '../utilits/CheckInput.js'
 
 function Greeting(generalModules) {
 
@@ -15,8 +17,13 @@ function Greeting(generalModules) {
   Show(curentModule);
 
   const ButtonEve = document.querySelector(".Plan");
+  const allInput =[
+  
+  document.querySelector(".event"),
+  document.querySelector(".date")]
+
   var dateMask = IMask(
-    document.querySelector(".date"),
+    allInput[1],
     {
       mask: Date,
       min: new Date(2022, 0, 1),
@@ -24,9 +31,6 @@ function Greeting(generalModules) {
       lazy: false
     });
 
-  const inputEve = document.querySelector(".event");
-  const Attent = document.querySelector(".Attention");
-  const AttentionTimes = document.querySelector('.AttentionTime');
 
   const Month = {
     '01': "Jan",
@@ -55,31 +59,16 @@ function Greeting(generalModules) {
   ButtonEve.addEventListener("click", (event) => {
     event.preventDefault();
 
-    CheckDate( document.querySelector(".date").value) || !inputEve.value.trim()
-      ? Attention()
+    CheckDate(allInput[1].value) || !allInput[0].value.trim()||new Date()>=new Date(`${allInput[1].value.slice(0,2)} ${Month[allInput[1].value.slice(3,5)]} ${allInput[1].value.slice(-4)}`)
+      ? CheckInput(allInput)
       :
-      new Date()>=new Date(`${document.querySelector(".date").value.slice(0,2)} ${Month[document.querySelector(".date").value.slice(3,5)]} ${document.querySelector(".date").value.slice(-4)}`)
-      ?AttentionTime()
-      :
-      (CounterTimer(document.querySelector(".date").value, inputEve.value, generalModules)) ;
+      (CounterTimer(allInput[1].value, allInput[0].value, generalModules)) ;
   });
 
-  function Attention() {
-    setTimeout(() => {
-      Clear(Attent)
-    }, 3000);
-
-    Show(Attent)
-  }
 
 
-  function AttentionTime() {
-    setTimeout(() => {
-      Clear(AttentionTimes)
-    }, 3000);
 
-    Show(AttentionTimes)
-  }
+
  
 
   

@@ -3,7 +3,7 @@ let path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = {
    
@@ -34,7 +34,15 @@ module.exports = {
         }),  new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
-          })],
+          }),
+          new CopyWebpackPlugin({
+      
+            patterns:[
+              {
+            from: path.resolve(__dirname, 'src/assets/check.png'),
+            to: path.resolve(__dirname, 'dist')
+          }
+          ] })],
         module: {
             rules: [
               {
@@ -57,6 +65,10 @@ module.exports = {
                   "css-loader",
                   "sass-loader",
                 ],
+              },
+              {
+                test: /\.(png|jpg|svg|gif)$/,
+                type: "asset/resource",
               }]
-
+              
     }}
